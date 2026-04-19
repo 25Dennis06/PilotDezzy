@@ -34,41 +34,47 @@
 
     <!-- NUC Specs -->
     <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="cpu"></i> Intel NUC</span>
+      <span class="tile-label"><i data-lucide="cpu"></i> NUC PC</span>
       <h2>Server-Specs</h2>
       <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="cpu"></i> Intel Core i5-1240P</li>
-        <li><i data-lucide="memory-stick"></i> 32 GB DDR4</li>
-        <li><i data-lucide="hard-drive"></i> 1 TB NVMe SSD</li>
-        <li><i data-lucide="monitor"></i> Proxmox VE 8.x</li>
-        <li><i data-lucide="zap"></i> ~15W idle</li>
+        <li><i data-lucide="cpu"></i> AMD Ryzen™ 7 5825U, 8 Kerne / 16 Threads</li>
+        <li><i data-lucide="memory-stick"></i> 32 GB DDR4 3200 MT/s (SO-DIMM×2)</li>
       </ul>
     </div>
 
     <!-- NAS -->
     <div class="tile reveal">
       <span class="tile-label"><i data-lucide="hard-drive"></i> NAS</span>
-      <h2>Synology Storage</h2>
+      <h2>Synology DS225+</h2>
       <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="hard-drive"></i> 2× 4 TB RAID 1</li>
-        <li><i data-lucide="folder"></i> File-Server / Backup</li>
-        <li><i data-lucide="film"></i> Plex Media Server</li>
-        <li><i data-lucide="download"></i> Automatische Backups</li>
-        <li><i data-lucide="lock"></i> Verschlüsselte Volumes</li>
+        <li><i data-lucide="hard-drive"></i> Synology DS225+</li>
+        <li><i data-lucide="container"></i> Docker: adguard home</li>
+        <li><i data-lucide="container"></i> Docker: rustdesk-server</li>
+        <li><i data-lucide="key"></i> Docker: passwortmanager</li>
       </ul>
     </div>
 
-    <!-- Services -->
+    <!-- Gaming/Entwickler PC -->
     <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="container"></i> Services</span>
-      <h2>Docker Stack</h2>
+      <span class="tile-label"><i data-lucide="monitor"></i> Gaming/Entwickler PC</span>
+      <h2>Desktop Specs</h2>
       <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="cloud"></i> Nextcloud</li>
-        <li><i data-lucide="shield"></i> Pi-hole + Unbound</li>
-        <li><i data-lucide="container"></i> Portainer</li>
-        <li><i data-lucide="network"></i> WireGuard VPN</li>
-        <li><i data-lucide="activity"></i> Uptime Kuma</li>
-        <li><i data-lucide="code-2"></i> Gitea</li>
+        <li><i data-lucide="cpu"></i> AMD Ryzen 7 9800X3D 8-Core</li>
+        <li><i data-lucide="memory-stick"></i> 32GB RAM</li>
+        <li><i data-lucide="monitor"></i> Nvidia 5070Ti</li>
+      </ul>
+    </div>
+    
+    <!-- Rack & Network -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="network"></i> Rack & VPN</span>
+      <h2>GeekPi 10" Rack & Tailscale</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="server"></i> GeekPi 10" Rack</li>
+        <li><i data-lucide="network"></i> tp Switch</li>
+        <li><i data-lucide="server"></i> NUC & NAS im Rack installiert</li>
+        <li><i data-lucide="shield"></i> Tailscale VPN mit Access Control</li>
+        <li><i data-lucide="smartphone"></i> Von außen über Handy erreichbar</li>
       </ul>
     </div>
 
@@ -86,17 +92,21 @@
 <span class="cm">│             🌐  Internet                │</span>
 <span class="cm">│                   │                     │</span>
 <span class="cm">│            ┌──────┴──────┐              │</span>
-<span class="cm">│            │   Router    │              │</span>
-<span class="cm">│            │ (Pi-hole)   │              │</span>
+<span class="cm">│            │  Tailscale  │              │</span>
+<span class="cm">│            │    VPN      │              │</span>
 <span class="cm">│            └──────┬──────┘              │</span>
-<span class="cm">│      ┌────────────┼────────────┐        │</span>
-<span class="cm">│      │            │            │        │</span>
-<span class="cm">│  </span><span class="var">Intel NUC</span>    <span class="str">Synology</span>    <span class="fn">Switch</span><span class="cm">    │</span>
-<span class="cm">│  </span><span class="var">Proxmox</span><span class="cm">      </span><span class="str">NAS</span><span class="cm">        </span><span class="fn">24-Port</span><span class="cm">   │</span>
-<span class="cm">│  </span><span class="var">├ Nextcloud</span><span class="cm">  </span><span class="str">├ Backup</span><span class="cm">    </span><span class="fn">├ APs</span><span class="cm">     │</span>
-<span class="cm">│  </span><span class="var">├ Gitea</span><span class="cm">      </span><span class="str">├ Media</span><span class="cm">     </span><span class="fn">├ IoT</span><span class="cm">     │</span>
-<span class="cm">│  </span><span class="var">├ Portainer</span><span class="cm">  </span><span class="str">└ Sync</span><span class="cm">      </span><span class="fn">└ Desk</span><span class="cm">    │</span>
-<span class="cm">│  </span><span class="var">└ Monitoring</span><span class="cm">                          │</span>
+<span class="cm">│       ┌───────────┼───────────┐         │</span>
+<span class="cm">│       │ 10" GeekPi Rack       │         │</span>
+<span class="cm">│       │                       │         │</span>
+<span class="cm">│  ┌────┴────┐ ┌────┴────┐ ┌────┴────┐    │</span>
+<span class="cm">│  │ tp      │ │ NUC PC  │ │ NAS     │    │</span>
+<span class="cm">│  │ Switch  │ │         │ │ DS225+  │    │</span>
+<span class="cm">│  └─────────┘ └─────────┘ └─────────┘    │</span>
+<span class="cm">│                   │           │         │</span>
+<span class="cm">│               Docker      Docker        │</span>
+<span class="cm">│                           - adguard     │</span>
+<span class="cm">│                           - rustdesk    │</span>
+<span class="cm">│                           - passwords   │</span>
 <span class="cm">└─────────────────────────────────────────┘</span></div>
       </div>
     </div>
