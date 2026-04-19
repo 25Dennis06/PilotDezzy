@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PilotDezzy – Rennrad, Strava Profil und Equipment." />
+  <title>Rennrad | PilotDezzy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+</head>
+<body>
+<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
+
+<header class="site-header">
+  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+  <div class="header-actions">
+    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="detail-hero">
+  <div class="detail-hero-icon"><i data-lucide="bike"></i></div>
+  <h1 class="detail-title">Rennrad</h1>
+  <p class="detail-subtitle">Pässe, Langstrecken und die Freiheit auf der Straße. Training trifft Meditation – auf zwei Rädern durch die Alpen und darüber hinaus.</p>
+</section>
+
+<!-- Content -->
+<section class="detail-content">
+  <div class="detail-grid">
+
+    <!-- Stats -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="activity"></i> Saison 2025</span>
+      <h2>Zahlen & Fakten</h2>
+      <div class="stat-row" style="margin-top:1rem;">
+        <div class="stat-block"><div class="stat-big">2.500+</div><div class="stat-desc">km / Jahr</div></div>
+        <div class="stat-block"><div class="stat-big">35+</div><div class="stat-desc">Pässe</div></div>
+        <div class="stat-block"><div class="stat-big">28.000</div><div class="stat-desc">Höhenmeter</div></div>
+      </div>
+    </div>
+
+    <!-- Strava Embed -->
+    <div class="tile col-2 reveal">
+      <span class="tile-label"><i data-lucide="map-pin"></i> Strava</span>
+      <h2>Mein Strava-Profil</h2>
+      <p style="margin-bottom:1rem;">Aktuelle Aktivitäten und Routen direkt von Strava.</p>
+
+      <div class="embed-container">
+        <!-- ═══ STRAVA EMBED ═══
+             Ersetze DEINE_ATHLETE_ID mit deiner echten Strava Athlete-ID.
+             Die findest du unter: https://www.strava.com/settings/profile
+             Deine URL sieht so aus: strava.com/athletes/12345678 → ID = 12345678
+        ═══════════════════════ -->
+        <div class="embed-placeholder">
+          <p>🔗 <strong>Strava-Profil einbinden</strong></p>
+          <p style="margin-top:0.5rem;">Ersetze in <code>pages/cycling.html</code> die Platzhalter-ID mit deiner Strava Athlete-ID:</p>
+          <code style="display:block;margin-top:0.75rem;font-size:0.72rem;color:var(--accent);">
+            &lt;iframe src="https://www.strava.com/athletes/DEINE_ID/latest-rides/..." /&gt;
+          </code>
+        </div>
+
+        <!-- Uncomment & replace DEINE_ID:
+        <iframe
+          allowtransparency="true"
+          frameborder="0"
+          height="454"
+          scrolling="no"
+          width="100%"
+          src="https://www.strava.com/athletes/DEINE_ID/latest-rides/DEINE_ID">
+        </iframe>
+        -->
+      </div>
+    </div>
+
+    <!-- Cycling Photo -->
+    <div class="tile tile-cover detail-full reveal">
+      <img src="../assets/cycling.png" alt="Rennrad auf einer Bergstraße bei Sonnenuntergang" class="tile-cover-img" style="height:300px;" loading="lazy" />
+      <div class="tile-cover-body">
+        <span class="tile-label"><i data-lucide="mountain"></i> Lieblingsstrecke</span>
+        <h2>Alpenüberquerung</h2>
+        <p>Mehrtägige Tour über die Alpenpässe – vom Bodensee bis zum Gardasee. Die ultimative Herausforderung auf dem Rennrad.</p>
+      </div>
+    </div>
+
+    <!-- Equipment -->
+    <div class="tile col-2 reveal">
+      <span class="tile-label"><i data-lucide="wrench"></i> Equipment</span>
+      <h2>Mein Setup</h2>
+      <img src="../assets/equipment.png" alt="Rennrad Equipment flat lay" class="detail-img detail-img-wide" style="margin-top:1rem;" loading="lazy" />
+    </div>
+
+    <!-- Gear List -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="list"></i> Gear</span>
+      <h2>Ausstattung</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="bike"></i> Carbon Rennrad</li>
+        <li><i data-lucide="gauge"></i> Wahoo ELEMNT</li>
+        <li><i data-lucide="heart-pulse"></i> Herzfrequenz-Gurt</li>
+        <li><i data-lucide="zap"></i> Shimano Ultegra</li>
+        <li><i data-lucide="wind"></i> Aero-Helm</li>
+        <li><i data-lucide="glasses"></i> Oakley Sutro</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

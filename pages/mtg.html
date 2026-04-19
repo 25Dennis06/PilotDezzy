@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PilotDezzy – Magic: The Gathering, Commander Decks und Strategie." />
+  <title>Magic: The Gathering | PilotDezzy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+</head>
+<body>
+<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
+
+<header class="site-header">
+  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+  <div class="header-actions">
+    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </div>
+</header>
+
+<section class="detail-hero">
+  <div class="detail-hero-icon"><i data-lucide="swords"></i></div>
+  <h1 class="detail-title">Magic: The Gathering</h1>
+  <p class="detail-subtitle">Deckbuilding ist wie Software-Architektur: Jede Karte eine Abhängigkeit, jeder Zug eine Entscheidung.</p>
+</section>
+
+<section class="detail-content">
+  <div class="detail-grid">
+
+    <!-- Format -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="crown"></i> Format</span>
+      <h2>Commander / EDH</h2>
+      <p style="margin-top:0.5rem;">100-Karten-Singleton, multiplayer, politisch. Commander ist das Format, das sich am meisten wie ein echtes Strategiespiel anfühlt. Jedes Deck erzählt eine Geschichte.</p>
+    </div>
+
+    <!-- Decks -->
+    <div class="tile col-2 reveal">
+      <span class="tile-label"><i data-lucide="layers"></i> Meine Decks</span>
+      <h2>Commander Collection</h2>
+
+      <div class="mtg-cards" style="margin-top:1rem; gap: 0.8rem;">
+        <div class="mtg-card" title="Atraxa – Counters">🧬</div>
+        <div class="mtg-card" title="Korvold – Aristocrats">🐉</div>
+        <div class="mtg-card" title="Omnath – Landfall">🌍</div>
+        <div class="mtg-card" title="Muldrotha – Graveyard">💀</div>
+        <div class="mtg-card" title="Urza – Artifacts">⚙️</div>
+      </div>
+
+      <ul class="info-list" style="margin-top:1.25rem;">
+        <li><i data-lucide="sparkles"></i> Atraxa, Praetors' Voice – Counters & Superfriends</li>
+        <li><i data-lucide="flame"></i> Korvold, Fae-Cursed King – Aristocrats / Sacrifice</li>
+        <li><i data-lucide="mountain"></i> Omnath, Locus of Creation – Landfall Combo</li>
+        <li><i data-lucide="skull"></i> Muldrotha, the Gravetide – Graveyard Value</li>
+        <li><i data-lucide="settings"></i> Urza, Lord High Artificer – Artifact Combo</li>
+      </ul>
+    </div>
+
+    <!-- Why MTG -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="brain"></i> Transfer</span>
+      <h2>MTG ↔ Code</h2>
+      <p style="margin-top:0.5rem;">Die Parallelen zwischen Magic und Programmieren sind erstaunlich: Ressourcen-Management, Abhängigkeiten, Edge Cases, und die Kunst, mit begrenzten Mitteln die optimale Lösung zu finden.</p>
+      <div class="stat-row" style="margin-top:1.25rem;">
+        <div class="stat-block"><div class="stat-big">5</div><div class="stat-desc">Decks</div></div>
+        <div class="stat-block"><div class="stat-big">500+</div><div class="stat-desc">Karten</div></div>
+      </div>
+    </div>
+
+    <!-- Community -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="users"></i> Community</span>
+      <h2>Spielabende & Mehr</h2>
+      <p style="margin-top:0.5rem;">Regelmäßige Commander-Runden mit Freunden, gelegentlich Turniere im lokalen Store. Magic ist ein soziales Spiel – der Tisch bringt die verschiedensten Menschen zusammen.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

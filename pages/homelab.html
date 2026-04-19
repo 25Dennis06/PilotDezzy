@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PilotDezzy – Homelab, Intel NUC, NAS und Self-Hosted Services." />
+  <title>Homelab | PilotDezzy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+</head>
+<body>
+<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
+
+<header class="site-header">
+  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+  <div class="header-actions">
+    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </div>
+</header>
+
+<section class="detail-hero">
+  <div class="detail-hero-icon"><i data-lucide="server"></i></div>
+  <h1 class="detail-title">Homelab</h1>
+  <p class="detail-subtitle">Intel NUC, Synology NAS und ein Netzwerk voller Self-Hosted Services. Alles unter meiner Kontrolle.</p>
+</section>
+
+<section class="detail-content">
+  <div class="detail-grid">
+
+    <!-- NUC Specs -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="cpu"></i> Intel NUC</span>
+      <h2>Server-Specs</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="cpu"></i> Intel Core i5-1240P</li>
+        <li><i data-lucide="memory-stick"></i> 32 GB DDR4</li>
+        <li><i data-lucide="hard-drive"></i> 1 TB NVMe SSD</li>
+        <li><i data-lucide="monitor"></i> Proxmox VE 8.x</li>
+        <li><i data-lucide="zap"></i> ~15W idle</li>
+      </ul>
+    </div>
+
+    <!-- NAS -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="hard-drive"></i> NAS</span>
+      <h2>Synology Storage</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="hard-drive"></i> 2× 4 TB RAID 1</li>
+        <li><i data-lucide="folder"></i> File-Server / Backup</li>
+        <li><i data-lucide="film"></i> Plex Media Server</li>
+        <li><i data-lucide="download"></i> Automatische Backups</li>
+        <li><i data-lucide="lock"></i> Verschlüsselte Volumes</li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="container"></i> Services</span>
+      <h2>Docker Stack</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="cloud"></i> Nextcloud</li>
+        <li><i data-lucide="shield"></i> Pi-hole + Unbound</li>
+        <li><i data-lucide="container"></i> Portainer</li>
+        <li><i data-lucide="network"></i> WireGuard VPN</li>
+        <li><i data-lucide="activity"></i> Uptime Kuma</li>
+        <li><i data-lucide="code-2"></i> Gitea</li>
+      </ul>
+    </div>
+
+    <!-- Network Diagram Placeholder -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="network"></i> Netzwerk</span>
+      <h2>Architektur-Überblick</h2>
+      <div class="code-window" style="margin-top:1rem;">
+        <div class="code-window-bar">
+          <span class="code-dot code-dot--r"></span>
+          <span class="code-dot code-dot--y"></span>
+          <span class="code-dot code-dot--g"></span>
+        </div>
+        <div class="code-body"><span class="cm">┌─────────────────────────────────────────┐</span>
+<span class="cm">│             🌐  Internet                │</span>
+<span class="cm">│                   │                     │</span>
+<span class="cm">│            ┌──────┴──────┐              │</span>
+<span class="cm">│            │   Router    │              │</span>
+<span class="cm">│            │ (Pi-hole)   │              │</span>
+<span class="cm">│            └──────┬──────┘              │</span>
+<span class="cm">│      ┌────────────┼────────────┐        │</span>
+<span class="cm">│      │            │            │        │</span>
+<span class="cm">│  </span><span class="var">Intel NUC</span>    <span class="str">Synology</span>    <span class="fn">Switch</span><span class="cm">    │</span>
+<span class="cm">│  </span><span class="var">Proxmox</span><span class="cm">      </span><span class="str">NAS</span><span class="cm">        </span><span class="fn">24-Port</span><span class="cm">   │</span>
+<span class="cm">│  </span><span class="var">├ Nextcloud</span><span class="cm">  </span><span class="str">├ Backup</span><span class="cm">    </span><span class="fn">├ APs</span><span class="cm">     │</span>
+<span class="cm">│  </span><span class="var">├ Gitea</span><span class="cm">      </span><span class="str">├ Media</span><span class="cm">     </span><span class="fn">├ IoT</span><span class="cm">     │</span>
+<span class="cm">│  </span><span class="var">├ Portainer</span><span class="cm">  </span><span class="str">└ Sync</span><span class="cm">      </span><span class="fn">└ Desk</span><span class="cm">    │</span>
+<span class="cm">│  </span><span class="var">└ Monitoring</span><span class="cm">                          │</span>
+<span class="cm">└─────────────────────────────────────────┘</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
