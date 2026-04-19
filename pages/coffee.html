@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,92 +9,123 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
 </head>
+
 <body>
-<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
-
-<header class="site-header">
-  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
-  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
-  <div class="header-actions">
-    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
-    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  <div class="bg-scene" aria-hidden="true">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
   </div>
-</header>
 
-<section class="detail-hero">
-  <div class="detail-hero-icon"><i data-lucide="coffee"></i></div>
-  <h1 class="detail-title">Kaffee</h1>
-  <p class="detail-subtitle">V60, Aeropress und frische Bohnen. Kaffee ist Ritual, Wissenschaft und der Treibstoff für guten Code.</p>
-</section>
+  <header class="site-header">
+    <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+    <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+    <div class="header-actions">
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </svg>
+    </div>
+  </header>
 
-<section class="detail-content">
-  <div class="detail-grid">
+  <section class="detail-hero">
+    <div class="detail-hero-icon"><i data-lucide="coffee"></i></div>
+    <h1 class="detail-title">Kaffee</h1>
+    <p class="detail-subtitle">V60, Aeropress und frische Bohnen. Kaffee ist Ritual, Wissenschaft und der Treibstoff für
+      guten Code.</p>
+  </section>
 
-    <!-- Hero Image -->
-    <div class="tile tile-cover col-2 reveal">
-      <img src="../assets/coffee.png" alt="Pour-Over Kaffeezubereitung" class="tile-cover-img" style="height:280px;" loading="lazy" />
-      <div class="tile-cover-body">
-        <span class="tile-label"><i data-lucide="droplets"></i> Pour-Over</span>
-        <h2>Das tägliche Ritual</h2>
-        <p>Frisch gemahlen, 93°C Wasser, 2:30 Min Durchlaufzeit. Jeden Morgen den gleichen Prozess – und doch jedes Mal ein leicht anderes Ergebnis.</p>
+  <section class="detail-content">
+    <div class="detail-grid">
+
+      <!-- Hero Image -->
+      <div class="tile tile-cover col-2 reveal">
+        <img src="../assets/coffee.png" alt="Pour-Over Kaffeezubereitung" class="tile-cover-img" style="height:280px;"
+          loading="lazy" />
+        <div class="tile-cover-body">
+          <span class="tile-label"><i data-lucide="droplets"></i> Pour-Over</span>
+          <h2>Das tägliche Ritual</h2>
+          <p>Frisch gemahlen, 93°C Wasser, 2:30 Min Durchlaufzeit. Jeden Morgen den gleichen Prozess – und doch jedes
+            Mal ein leicht anderes Ergebnis.</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Brew Methods -->
-    <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="flask-conical"></i> Methoden</span>
-      <h2>Zubereitung</h2>
-      <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="triangle"></i> Hario V60</li>
-        <li><i data-lucide="cylinder"></i> AeroPress</li>
-        <li><i data-lucide="coffee"></i> French Press</li>
-        <li><i data-lucide="gauge"></i> Espresso (Siebträger)</li>
-      </ul>
-    </div>
-
-    <!-- Equipment -->
-    <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="wrench"></i> Equipment</span>
-      <h2>Mein Setup</h2>
-      <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="settings"></i> Comandante C40 Mühle</li>
-        <li><i data-lucide="thermometer"></i> Temperaturgesteuerter Kessel</li>
-        <li><i data-lucide="scale"></i> Acaia Pearl Waage</li>
-        <li><i data-lucide="clock"></i> Timer App</li>
-      </ul>
-    </div>
-
-    <!-- Beans -->
-    <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="leaf"></i> Bohnen</span>
-      <h2>Lieblings-Röstereien</h2>
-      <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="store"></i> The Barn – Berlin</li>
-        <li><i data-lucide="store"></i> Coffee Circle</li>
-        <li><i data-lucide="store"></i> Father's Sons – München</li>
-        <li><i data-lucide="store"></i> Bonanza Coffee</li>
-      </ul>
-    </div>
-
-    <!-- Stats -->
-    <div class="tile detail-full reveal">
-      <div class="stat-row">
-        <div class="stat-block"><div class="stat-big">3–4</div><div class="stat-desc">Tassen / Tag</div></div>
-        <div class="stat-block"><div class="stat-big">V60</div><div class="stat-desc">Favorit</div></div>
-        <div class="stat-block"><div class="stat-big">Light</div><div class="stat-desc">Roast-Präferenz</div></div>
-        <div class="stat-block"><div class="stat-big">Single</div><div class="stat-desc">Origin</div></div>
+      <!-- Brew Methods -->
+      <div class="tile reveal">
+        <span class="tile-label"><i data-lucide="flask-conical"></i> Methoden</span>
+        <h2>Zubereitung</h2>
+        <ul class="info-list" style="margin-top:0.75rem;">
+          <li><i data-lucide="triangle"></i> Chemex</li>
+          <li><i data-lucide="cylinder"></i> Hario V60</li>
+        </ul>
       </div>
+
+      <!-- Equipment -->
+      <div class="tile reveal">
+        <span class="tile-label"><i data-lucide="wrench"></i> Equipment</span>
+        <h2>Mein Setup</h2>
+        <ul class="info-list" style="margin-top:0.75rem;">
+          <li><i data-lucide="settings"></i> Kingrinder K6</li>
+          <li><i data-lucide="thermometer"></i> Temperaturgesteuerter Kessel</li>
+          <li><i data-lucide="scale"></i> Acaia Pearl Waage</li>
+          <li><i data-lucide="clock"></i> Timer App</li>
+        </ul>
+      </div>
+
+      <!-- Beans -->
+      <div class="tile reveal">
+        <span class="tile-label"><i data-lucide="leaf"></i> Bohnen</span>
+        <h2>Lieblings-Röstereien</h2>
+        <ul class="info-list" style="margin-top:0.75rem;">
+          <li><i data-lucide="store"></i> Coffee Circle</li>
+        </ul>
+      </div>
+
+      <!-- Stats -->
+      <div class="tile detail-full reveal">
+        <div class="stat-row">
+          <div class="stat-block">
+            <div class="stat-big">1-2</div>
+            <div class="stat-desc">Tassen / Tag</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">Chemex</div>
+            <div class="stat-desc">Favorit</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">Light</div>
+            <div class="stat-desc">Roast-Präferenz</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">Single</div>
+            <div class="stat-desc">Origin</div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-
-<footer class="site-footer">
-  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
-</footer>
-<script src="../script.js"></script>
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+  </footer>
+  <script src="../script.js"></script>
 </body>
+
 </html>
