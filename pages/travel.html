@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,81 +9,186 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
 </head>
+
 <body>
-<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
-
-<header class="site-header">
-  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
-  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
-  <div class="header-actions">
-    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
-    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  <div class="bg-scene" aria-hidden="true">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
   </div>
-</header>
 
-<section class="detail-hero">
-  <div class="detail-hero-icon"><i data-lucide="globe"></i></div>
-  <h1 class="detail-title">Reisen</h1>
-  <p class="detail-subtitle">Orte, die mich geprägt haben. Von Europas Küsten bis zu den Alpen – jede Reise ein neues Kapitel.</p>
-</section>
-
-<section class="detail-content">
-  <div class="detail-grid">
-
-    <!-- World Map -->
-    <div class="tile detail-full reveal">
-      <img src="../assets/worldmap.png" alt="Weltkarte mit besuchten Orten" class="detail-img detail-img-wide" loading="lazy" />
+  <header class="site-header">
+    <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+    <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+    <div class="header-actions">
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </svg>
     </div>
+  </header>
 
-    <!-- Countries -->
-    <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="map-pin"></i> Besucht</span>
-      <h2>Länder</h2>
-      <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="map-pin"></i> 🇩🇪 Deutschland – Heimat</li>
-        <li><i data-lucide="map-pin"></i> 🇪🇸 Spanien – Mallorca, Barcelona</li>
-        <li><i data-lucide="map-pin"></i> 🇮🇹 Italien – Gardasee, Rom</li>
-        <li><i data-lucide="map-pin"></i> 🇦🇹 Österreich – Tirol, Wien</li>
-        <li><i data-lucide="map-pin"></i> 🇭🇷 Kroatien – Dubrovnik, Split</li>
-        <li><i data-lucide="map-pin"></i> 🇳🇱 Niederlande – Amsterdam</li>
-        <li><i data-lucide="map-pin"></i> 🇫🇷 Frankreich – Paris, Provence</li>
-        <li><i data-lucide="map-pin"></i> 🇬🇷 Griechenland – Kreta, Athen</li>
-      </ul>
-    </div>
+  <section class="detail-hero">
+    <div class="detail-hero-icon"><i data-lucide="globe"></i></div>
+    <h1 class="detail-title">Reisen</h1>
+    <p class="detail-subtitle">Orte, die mich geprägt haben. Von Europas Küsten bis zu den Alpen – jede Reise ein neues
+      Kapitel.</p>
+  </section>
 
-    <!-- Travel Style -->
-    <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="compass"></i> Stil</span>
-      <h2>So reise ich</h2>
-      <p style="margin-top:0.5rem;">Am liebsten mit dem Rennrad oder als Roadtrip. Ich suche nach Natur, Kultur und gutem Essen – fernab vom Massentourismus.</p>
-      <div class="stat-row" style="margin-top:1.25rem;">
-        <div class="stat-block"><div class="stat-big">8</div><div class="stat-desc">Länder</div></div>
-        <div class="stat-block"><div class="stat-big">20+</div><div class="stat-desc">Städte</div></div>
-        <div class="stat-block"><div class="stat-big">∞</div><div class="stat-desc">Fernweh</div></div>
+  <section class="detail-content">
+    <div class="detail-grid">
+
+      <!-- World Map -->
+      <div class="tile detail-full reveal">
+        <img src="../assets/worldmap.png" alt="Weltkarte mit besuchten Orten" class="detail-img detail-img-wide"
+          loading="lazy" />
       </div>
+
+      <!-- Countries -->
+      <div class="tile reveal">
+        <span class="tile-label"><i data-lucide="map-pin"></i> Besucht</span>
+        <h2>Länder</h2>
+        <ul class="info-list" style="margin-top:0.75rem;">
+          <li><i data-lucide="map-pin"></i> 🇩🇪 Deutschland – Heimat</li>
+          <li><i data-lucide="map-pin"></i> 🇪🇸 Spanien – Mallorca, Barcelona</li>
+          <li><i data-lucide="map-pin"></i> 🇮🇹 Italien – Gardasee, Rom</li>
+          <li><i data-lucide="map-pin"></i> 🇦🇹 Österreich – Tirol, Wien</li>
+          <li><i data-lucide="map-pin"></i> 🇭🇷 Kroatien – Dubrovnik, Split</li>
+          <li><i data-lucide="map-pin"></i> 🇳🇱 Niederlande – Amsterdam</li>
+          <li><i data-lucide="map-pin"></i> 🇫🇷 Frankreich – Paris, Provence</li>
+          <li><i data-lucide="map-pin"></i> 🇬🇷 Griechenland – Kreta, Athen</li>
+        </ul>
+      </div>
+
+      <!-- Travel Style -->
+      <div class="tile reveal">
+        <span class="tile-label"><i data-lucide="compass"></i> Stil</span>
+        <h2>So reise ich</h2>
+        <p style="margin-top:0.5rem;">Am liebsten mit dem Rennrad oder als Roadtrip. Ich suche nach Natur, Kultur und
+          gutem Essen – fernab vom Massentourismus.</p>
+        <div class="stat-row" style="margin-top:1.25rem;">
+          <div class="stat-block">
+            <div class="stat-big">8</div>
+            <div class="stat-desc">Länder</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">20+</div>
+            <div class="stat-desc">Städte</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">∞</div>
+            <div class="stat-desc">Fernweh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bucket List -->
+      <div class="tile reveal">
+        <span class="tile-label"><i data-lucide="sparkles"></i> Bucket List</span>
+        <h2>Als Nächstes</h2>
+        <ul class="info-list" style="margin-top:0.75rem;">
+          <li><i data-lucide="plane"></i> 🇳🇴 Norwegen – Fjorde & Lofoten</li>
+          <li><i data-lucide="plane"></i> 🇯🇵 Japan – Tokyo & Kyoto</li>
+          <li><i data-lucide="plane"></i> 🇮🇸 Island – Ringstraße</li>
+          <li><i data-lucide="plane"></i> 🇵🇹 Portugal – Algarve & Lissabon</li>
+        </ul>
+      </div>
+
+      <!-- West Highland Way -->
+      <div class="tile detail-full reveal">
+        <span class="tile-label"><i data-lucide="mountain"></i> Abenteuer</span>
+        <h2>West Highland Way</h2>
+        <p style="margin-top:0.5rem; max-width: 800px;">
+          154 Kilometer durch die atemberaubenden schottischen Highlands. Von Milngavie bis Fort William, vorbei an Loch
+          Lomond, über das Rannoch Moor und durch dramatische Täler wie Glencoe. Eine unvergessliche Wanderung bei
+          typisch schottischem Wetter, die sowohl physisch fordernd als auch landschaftlich absolut einmalig war.
+        </p>
+        <div class="stat-row" style="margin-top:1.25rem;">
+          <div class="stat-block">
+            <div class="stat-big">154</div>
+            <div class="stat-desc">Kilometer</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">7</div>
+            <div class="stat-desc">Tage</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pacific Northwest -->
+      <div class="tile detail-full reveal">
+        <span class="tile-label"><i data-lucide="trees"></i> Roadtrip</span>
+        <h2>Pacific Northwest & Olympic Peninsula</h2>
+        <p style="margin-top:0.5rem; max-width: 800px;">
+          Ein ikonischer Roadtrip durch den rauen, grünen Nordwesten der USA. Der Olympic Nationalpark verzaubert mit
+          echten Regenwäldern wie dem Hoh Rain Forest, gigantischen Gletschergipfeln und einsamen, treibholzgesäumten
+          Pazifikstränden wie Ruby Beach. Ein Paradies für Natur- und Wanderfans fernab der pulsierenden Metropole
+          Seattle.
+        </p>
+        <div class="stat-row" style="margin-top:1.25rem;">
+          <div class="stat-block">
+            <div class="stat-big">PNW</div>
+            <div class="stat-desc">Washington State</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">100%</div>
+            <div class="stat-desc">Regenwald-Vibes</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">∞</div>
+            <div class="stat-desc">Grüntöne</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vancouver BC -->
+      <div class="tile detail-full reveal">
+        <span class="tile-label"><i data-lucide="graduation-cap"></i> Auslandssemester</span>
+        <h2>Vancouver, BC (Kanada)</h2>
+        <p style="margin-top:0.5rem; max-width: 800px;">
+          Mein absolutes Highlight an der kanadischen Westküste: 6 Monate Leben und Forschen in Vancouver. Hier habe ich
+          nicht nur die atemberaubende Natur zwischen Ozean und Bergen erlebt, sondern auch meine Bachelorarbeit im
+          Bereich Engineering Physics (Technische Physik) geschrieben.
+        </p>
+        <div class="stat-row" style="margin-top:1.25rem;">
+          <div class="stat-block">
+            <div class="stat-big">6</div>
+            <div class="stat-desc">Monate</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">1</div>
+            <div class="stat-desc">Bachelorarbeit</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-big">B.Eng.</div>
+            <div class="stat-desc">Engineering Physics</div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Bucket List -->
-    <div class="tile reveal">
-      <span class="tile-label"><i data-lucide="sparkles"></i> Bucket List</span>
-      <h2>Als Nächstes</h2>
-      <ul class="info-list" style="margin-top:0.75rem;">
-        <li><i data-lucide="plane"></i> 🇳🇴 Norwegen – Fjorde & Lofoten</li>
-        <li><i data-lucide="plane"></i> 🇯🇵 Japan – Tokyo & Kyoto</li>
-        <li><i data-lucide="plane"></i> 🇮🇸 Island – Ringstraße</li>
-        <li><i data-lucide="plane"></i> 🇵🇹 Portugal – Algarve & Lissabon</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<footer class="site-footer">
-  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
-</footer>
-<script src="../script.js"></script>
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+  </footer>
+  <script src="../script.js"></script>
 </body>
+
 </html>
