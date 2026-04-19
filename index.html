@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PilotDezzy – Zwischen Bits, Bohnen und Sprints. Portfolio von Dennis: Tech, Outdoor, Hobbys und Craft." />
+  <meta name="description"
+    content="PilotDezzy – Zwischen Bits, Bohnen und Sprints. Portfolio von Dennis: Tech, Outdoor, Hobbys und Craft." />
   <title>PilotDezzy | Zwischen Bits, Bohnen und Sprints</title>
 
   <!-- Tailwind CDN -->
@@ -29,261 +31,284 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
 </head>
 
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════════
      BACKGROUND BLOBS
 ═══════════════════════════════════════════════════════════════ -->
-<div class="bg-scene" aria-hidden="true">
-  <div class="bg-blob bg-blob--1"></div>
-  <div class="bg-blob bg-blob--2"></div>
-  <div class="bg-blob bg-blob--3"></div>
-</div>
+  <div class="bg-scene" aria-hidden="true">
+    <div class="bg-blob bg-blob--1"></div>
+    <div class="bg-blob bg-blob--2"></div>
+    <div class="bg-blob bg-blob--3"></div>
+  </div>
 
 
-<!-- ═══════════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════════
      HEADER
 ═══════════════════════════════════════════════════════════════ -->
-<header class="site-header">
-  <a href="#" class="site-logo">&lt;PilotDezzy /&gt;</a>
+  <header class="site-header">
+    <a href="#" class="site-logo">&lt;PilotDezzy /&gt;</a>
 
-  <div class="header-actions">
-    <!-- Sun / Moon icons -->
-    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
-    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-  </div>
-</header>
+    <div class="header-actions">
+      <!-- Sun / Moon icons -->
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.4">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 1">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </svg>
+    </div>
+  </header>
 
 
-<!-- ═══════════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════════
      BENTO GRID
 ═══════════════════════════════════════════════════════════════ -->
-<main class="bento-wrapper">
-  <div class="bento-grid">
+  <main class="bento-wrapper">
+    <div class="bento-grid">
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  1 · HERO – Name & Slogan                ║
          ╚═══════════════════════════════════════════╝ -->
-    <article class="tile tile-hero col-2 row-2 sm-col-2 reveal">
-      <img src="./assets/profile.png"
-           alt="PilotDezzy Avatar"
-           class="hero-avatar"
-           loading="eager" />
-      <h1 class="hero-name">PilotDezzy</h1>
-      <p class="hero-slogan" id="slogan" data-text="Zwischen Bits, Bohnen und Sprints.">Zwischen Bits, Bohnen und Sprints.</p>
+      <article class="tile tile-hero col-2 row-2 sm-col-2 reveal">
+        <img src="./assets/profile.png" alt="PilotDezzy Avatar" class="hero-avatar" loading="eager" />
+        <h1 class="hero-name">PilotDezzy</h1>
+        <p class="hero-slogan" id="slogan" data-text="Zwischen Bits, Bohnen und Sprints.">Zwischen Bits, Bohnen und
+          Sprints.</p>
 
-      <div class="hero-links">
-        <a href="https://github.com/25Dennis06" target="_blank" rel="noopener" class="hero-link">
-          <i data-lucide="github"></i> GitHub
-        </a>
-        <a href="mailto:dennis@example.com" class="hero-link">
-          <i data-lucide="mail"></i> Mail
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="hero-link">
-          <i data-lucide="linkedin"></i> LinkedIn
-        </a>
-      </div>
-    </article>
+        <div class="hero-links">
+          <a href="https://github.com/25Dennis06" target="_blank" rel="noopener" class="hero-link">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a href="mailto:dezzystang@googlemail.com" class="hero-link">
+            <i data-lucide="mail"></i> Mail
+          </a>
+          <a href="https://www.linkedin.com/in/dennis-stang-618695128/" target="_blank" rel="noopener"
+            class="hero-link">
+            <i data-lucide="linkedin"></i> LinkedIn
+          </a>
+          <a href="https://instagram.com/25dennis96/" target="_blank" rel="noopener" class="hero-link">
+            <i data-lucide="instagram"></i> Instagram
+          </a>
+        </div>
+      </article>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  2 · TECH STACK                           ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/tech.html" class="tile-link col-2 sm-col-2 reveal" aria-label="Tech Stack Detail-Seite">
-      <article class="tile">
-        <span class="tile-label"><i data-lucide="cpu"></i> Tech Stack</span>
-        <h2>Was mich antreibt</h2>
-        <p>Sprachen, Frameworks und Tools, mit denen ich täglich arbeite.</p>
-        <div class="tech-stack">
-          <span class="tech-pill"><i data-lucide="file-code-2"></i> HTML5</span>
-          <span class="tech-pill"><i data-lucide="palette"></i> CSS3</span>
-          <span class="tech-pill"><i data-lucide="braces"></i> JavaScript</span>
-          <span class="tech-pill"><i data-lucide="file-type"></i> TypeScript</span>
-          <span class="tech-pill"><i data-lucide="atom"></i> React</span>
-          <span class="tech-pill"><i data-lucide="hexagon"></i> Node.js</span>
-          <span class="tech-pill"><i data-lucide="database"></i> Python</span>
-          <span class="tech-pill"><i data-lucide="wind"></i> Tailwind</span>
-          <span class="tech-pill"><i data-lucide="git-branch"></i> Git</span>
-          <span class="tech-pill"><i data-lucide="container"></i> Docker</span>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/tech.html" class="tile-link col-2 sm-col-2 reveal" aria-label="Tech Stack Detail-Seite">
+        <article class="tile">
+          <span class="tile-label"><i data-lucide="cpu"></i> Tech Stack</span>
+          <h2>Was mich antreibt</h2>
+          <p>Sprachen, Frameworks und Tools, mit denen ich täglich arbeite.</p>
+          <div class="tech-stack">
+            <span class="tech-pill"><i data-lucide="file-code-2"></i> HTML5</span>
+            <span class="tech-pill"><i data-lucide="palette"></i> CSS3</span>
+            <span class="tech-pill"><i data-lucide="braces"></i> JavaScript</span>
+            <span class="tech-pill"><i data-lucide="file-type"></i> TypeScript</span>
+            <span class="tech-pill"><i data-lucide="atom"></i> React</span>
+            <span class="tech-pill"><i data-lucide="hexagon"></i> Node.js</span>
+            <span class="tech-pill"><i data-lucide="database"></i> Python</span>
+            <span class="tech-pill"><i data-lucide="wind"></i> Tailwind</span>
+            <span class="tech-pill"><i data-lucide="git-branch"></i> Git</span>
+            <span class="tech-pill"><i data-lucide="container"></i> Docker</span>
+          </div>
+        </article>
+      </a>
 
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  4 · HOMELAB / NAS                        ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/homelab.html" class="tile-link reveal" aria-label="Homelab NAS Detail-Seite">
-      <article class="tile">
-        <span class="tile-label"><i data-lucide="server"></i> Homelab</span>
-        <h2>Heimnetzwerk</h2>
-        <p>Intel NUC, NAS &amp; Self-Hosted Infrastruktur.</p>
-        <div class="homelab-grid">
-          <div class="homelab-item"><i data-lucide="cpu"></i><span>Intel NUC</span></div>
-          <div class="homelab-item"><i data-lucide="hard-drive"></i><span>Synology NAS</span></div>
-          <div class="homelab-item"><i data-lucide="shield"></i><span>Pi-hole DNS</span></div>
-          <div class="homelab-item"><i data-lucide="network"></i><span>VPN Tunnel</span></div>
-          <div class="homelab-item"><i data-lucide="cloud"></i><span>Nextcloud</span></div>
-          <div class="homelab-item"><i data-lucide="container"></i><span>Docker</span></div>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/homelab.html" class="tile-link reveal" aria-label="Homelab NAS Detail-Seite">
+        <article class="tile">
+          <span class="tile-label"><i data-lucide="server"></i> Homelab</span>
+          <h2>Heimnetzwerk</h2>
+          <p>Intel NUC, NAS &amp; Self-Hosted Infrastruktur.</p>
+          <div class="homelab-grid">
+            <div class="homelab-item"><i data-lucide="cpu"></i><span>Intel NUC</span></div>
+            <div class="homelab-item"><i data-lucide="hard-drive"></i><span>Synology NAS</span></div>
+            <div class="homelab-item"><i data-lucide="shield"></i><span>Pi-hole DNS</span></div>
+            <div class="homelab-item"><i data-lucide="network"></i><span>VPN Tunnel</span></div>
+            <div class="homelab-item"><i data-lucide="cloud"></i><span>Nextcloud</span></div>
+            <div class="homelab-item"><i data-lucide="container"></i><span>Docker</span></div>
+          </div>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  5 · RENNRAD / CYCLING                    ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/cycling.html" class="tile-link reveal" aria-label="Rennrad Detail-Seite">
-      <article class="tile tile-cover">
-        <img src="./assets/cycling.png"
-             alt="Rennrad auf einer Bergstraße bei Sonnenuntergang"
-             class="tile-cover-img"
-             loading="lazy" />
-        <div class="tile-cover-body">
-          <span class="tile-label"><i data-lucide="bike"></i> Rennrad</span>
-          <h2>Auf zwei Rädern</h2>
-          <p>Pässe, Langstrecken und die Freiheit auf der Straße. Training trifft Meditation.</p>
-          <div class="hobby-stats">
-            <div><div class="hobby-stat-num">2.500+</div><div class="hobby-stat-label">km / Jahr</div></div>
-            <div><div class="hobby-stat-num">35+</div><div class="hobby-stat-label">Pässe</div></div>
+      <a href="./pages/cycling.html" class="tile-link reveal" aria-label="Rennrad Detail-Seite">
+        <article class="tile tile-cover">
+          <img src="./assets/cycling.png" alt="Rennrad auf einer Bergstraße bei Sonnenuntergang" class="tile-cover-img"
+            loading="lazy" />
+          <div class="tile-cover-body">
+            <span class="tile-label"><i data-lucide="bike"></i> Rennrad</span>
+            <h2>Auf zwei Rädern</h2>
+            <p>Pässe, Langstrecken und die Freiheit auf der Straße. Training trifft Meditation.</p>
+            <div class="hobby-stats">
+              <div>
+                <div class="hobby-stat-num">2.500+</div>
+                <div class="hobby-stat-label">km / Jahr</div>
+              </div>
+              <div>
+                <div class="hobby-stat-num">35+</div>
+                <div class="hobby-stat-label">Pässe</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </article>
-    </a>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  6 · REISEN / WORLD MAP                   ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/travel.html" class="tile-link col-3 sm-col-2 reveal" aria-label="Reisen Detail-Seite">
-      <article class="tile">
-        <span class="tile-label"><i data-lucide="map-pin"></i> Reisen</span>
-        <h2>Orte, die mich geprägt haben</h2>
-        <img src="./assets/worldmap.png"
-             alt="Weltkarte mit besuchten Orten"
-             class="travel-map"
-             loading="lazy" />
-        <div class="travel-tags">
-          <span class="travel-tag">🇩🇪 Deutschland</span>
-          <span class="travel-tag">🇪🇸 Spanien</span>
-          <span class="travel-tag">🇮🇹 Italien</span>
-          <span class="travel-tag">🇦🇹 Österreich</span>
-          <span class="travel-tag">🇭🇷 Kroatien</span>
-          <span class="travel-tag">🇳🇱 Niederlande</span>
-          <span class="travel-tag">🇫🇷 Frankreich</span>
-          <span class="travel-tag">🇬🇷 Griechenland</span>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/travel.html" class="tile-link col-3 sm-col-2 reveal" aria-label="Reisen Detail-Seite">
+        <article class="tile">
+          <span class="tile-label"><i data-lucide="map-pin"></i> Reisen</span>
+          <h2>Orte, die mich geprägt haben</h2>
+          <img src="./assets/worldmap.png" alt="Weltkarte mit besuchten Orten" class="travel-map" loading="lazy" />
+          <div class="travel-tags">
+            <span class="travel-tag">🇩🇪 Deutschland</span>
+            <span class="travel-tag">🇪🇸 Spanien</span>
+            <span class="travel-tag">🇮🇹 Italien</span>
+            <span class="travel-tag">🇦🇹 Österreich</span>
+            <span class="travel-tag">🇭🇷 Kroatien</span>
+            <span class="travel-tag">🇳🇱 Niederlande</span>
+            <span class="travel-tag">🇫🇷 Frankreich</span>
+            <span class="travel-tag">🇬🇷 Griechenland</span>
+          </div>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  7 · ANGELN                               ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/fishing.html" class="tile-link reveal" aria-label="Angeln Detail-Seite">
-      <article class="tile">
-        <div class="hobby-icon"><i data-lucide="fish"></i></div>
-        <span class="tile-label"><i data-lucide="waves"></i> Outdoor</span>
-        <h2>Angeln</h2>
-        <p>Geduld, Natur und Entschleunigung. Am Wasser wird der Kopf frei – die beste Debugger-Pause.</p>
-        <div class="hobby-stats">
-          <div><div class="hobby-stat-num">∞</div><div class="hobby-stat-label">Geduld</div></div>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/fishing.html" class="tile-link reveal" aria-label="Angeln Detail-Seite">
+        <article class="tile">
+          <div class="hobby-icon"><i data-lucide="fish"></i></div>
+          <span class="tile-label"><i data-lucide="waves"></i> Outdoor</span>
+          <h2>Angeln</h2>
+          <p>Geduld, Natur und Entschleunigung. Am Wasser wird der Kopf frei – die beste Debugger-Pause.</p>
+          <div class="hobby-stats">
+            <div>
+              <div class="hobby-stat-num">∞</div>
+              <div class="hobby-stat-label">Geduld</div>
+            </div>
+          </div>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  8 · SCHÜTZENVEREIN                       ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/shooting.html" class="tile-link reveal" aria-label="Schützenverein Detail-Seite">
-      <article class="tile">
-        <div class="hobby-icon"><i data-lucide="crosshair"></i></div>
-        <span class="tile-label"><i data-lucide="target"></i> Präzision</span>
-        <h2>Schützenverein</h2>
-        <p>Fokus, Ruhe und Präzision. Sportschießen trainiert genau die Eigenschaften, die auch guten Code ausmachen.</p>
-      </article>
-    </a>
+      <a href="./pages/shooting.html" class="tile-link reveal" aria-label="Schützenverein Detail-Seite">
+        <article class="tile">
+          <div class="hobby-icon"><i data-lucide="crosshair"></i></div>
+          <span class="tile-label"><i data-lucide="target"></i> Präzision</span>
+          <h2>Schützenverein</h2>
+          <p>Fokus, Ruhe und Präzision. Sportschießen trainiert genau die Eigenschaften, die auch guten Code ausmachen.
+          </p>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  9 · MAGIC THE GATHERING                  ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/mtg.html" class="tile-link col-2 sm-col-2 reveal" aria-label="Magic the Gathering Detail-Seite">
-      <article class="tile">
-        <span class="tile-label"><i data-lucide="swords"></i> Strategie</span>
-        <h2>Magic: The Gathering</h2>
-        <p>Deckbuilding ist wie Software-Architektur: Jede Karte eine Abhängigkeit, jeder Zug eine Entscheidung. Commander ist mein Format.</p>
-        <div class="mtg-cards">
-          <div class="mtg-card">🧙</div>
-          <div class="mtg-card">🐉</div>
-          <div class="mtg-card">⚔️</div>
-          <div class="mtg-card">🔮</div>
-          <div class="mtg-card">🌀</div>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/mtg.html" class="tile-link col-2 sm-col-2 reveal" aria-label="Magic the Gathering Detail-Seite">
+        <article class="tile">
+          <span class="tile-label"><i data-lucide="swords"></i> Strategie</span>
+          <h2>Magic: The Gathering</h2>
+          <p>Deckbuilding ist wie Software-Architektur: Jede Karte eine Abhängigkeit, jeder Zug eine Entscheidung.
+            Commander ist mein Format.</p>
+          <div class="mtg-cards">
+            <div class="mtg-card">🧙</div>
+            <div class="mtg-card">🐉</div>
+            <div class="mtg-card">⚔️</div>
+            <div class="mtg-card">🔮</div>
+            <div class="mtg-card">🌀</div>
+          </div>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  10 · KAFFEE                              ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/coffee.html" class="tile-link reveal" aria-label="Kaffee Detail-Seite">
-      <article class="tile tile-cover">
-        <img src="./assets/coffee.png"
-             alt="Pour-Over Kaffeezubereitung auf dunkler Oberfläche"
-             class="tile-cover-img"
-             loading="lazy" />
-        <div class="tile-cover-body">
-          <span class="tile-label"><i data-lucide="coffee"></i> Craft</span>
-          <h2>Kaffee-Zubereitung</h2>
-          <p>V60 Pour-Over, Aeropress und frische Bohnen. Kaffee ist für mich Ritual und Antrieb zugleich – der Treibstoff für guten Code.</p>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/coffee.html" class="tile-link reveal" aria-label="Kaffee Detail-Seite">
+        <article class="tile tile-cover">
+          <img src="./assets/coffee.png" alt="Pour-Over Kaffeezubereitung auf dunkler Oberfläche" class="tile-cover-img"
+            loading="lazy" />
+          <div class="tile-cover-body">
+            <span class="tile-label"><i data-lucide="coffee"></i> Craft</span>
+            <h2>Kaffee-Zubereitung</h2>
+            <p>V60 Pour-Over, Aeropress und frische Bohnen. Kaffee ist für mich Ritual und Antrieb zugleich – der
+              Treibstoff für guten Code.</p>
+          </div>
+        </article>
+      </a>
 
 
-    <!-- ╔═══════════════════════════════════════════╗
+      <!-- ╔═══════════════════════════════════════════╗
          ║  11 · STICKER                             ║
          ╚═══════════════════════════════════════════╝ -->
-    <a href="./pages/stickers.html" class="tile-link reveal" aria-label="Sticker-Werkstatt Detail-Seite">
-      <article class="tile">
-        <span class="tile-label"><i data-lucide="sticker"></i> Craft</span>
-        <h2>Sticker-Werkstatt</h2>
-        <p>Custom Sticker designen und produzieren. Von der Vektor-Grafik bis zur fertigen Folie.</p>
-        <div class="sticker-gallery">
-          <div class="sticker">💻</div>
-          <div class="sticker">🚀</div>
-          <div class="sticker">☕</div>
-          <div class="sticker">🎣</div>
-          <div class="sticker">🚴</div>
-          <div class="sticker">🎯</div>
-          <div class="sticker">🃏</div>
-        </div>
-      </article>
-    </a>
+      <a href="./pages/stickers.html" class="tile-link reveal" aria-label="Sticker-Werkstatt Detail-Seite">
+        <article class="tile">
+          <span class="tile-label"><i data-lucide="sticker"></i> Craft</span>
+          <h2>Sticker-Werkstatt</h2>
+          <p>Custom Sticker designen und produzieren. Von der Vektor-Grafik bis zur fertigen Folie.</p>
+          <div class="sticker-gallery">
+            <div class="sticker">💻</div>
+            <div class="sticker">🚀</div>
+            <div class="sticker">☕</div>
+            <div class="sticker">🎣</div>
+            <div class="sticker">🚴</div>
+            <div class="sticker">🎯</div>
+            <div class="sticker">🃏</div>
+          </div>
+        </article>
+      </a>
 
-  </div><!-- /bento-grid -->
-</main>
+    </div><!-- /bento-grid -->
+  </main>
 
 
-<!-- ═══════════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════════════════════════ -->
-<footer class="site-footer">
-  <p>© <span id="year">2026</span> PilotDezzy · Gebaut mit ☕ und Tailwind CSS</p>
-  <p style="margin-top:0.35rem">
-    <a href="https://github.com/25Dennis06/PilotDezzy" target="_blank" rel="noopener">Source on GitHub</a>
-  </p>
-</footer>
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> PilotDezzy · Gebaut mit ☕ und Tailwind CSS</p>
+    <p style="margin-top:0.35rem">
+      <a href="https://github.com/25Dennis06/PilotDezzy" target="_blank" rel="noopener">Source on GitHub</a>
+    </p>
+  </footer>
 
 
-<!-- JavaScript -->
-<script src="./script.js"></script>
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
 </body>
+
 </html>
