@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PilotDezzy – Codex Omnia: Offline-Wikipedia mit RAG-Pipeline auf einem Raspberry Pi 2W." />
+  <title>Codex Omnia | PilotDezzy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+</head>
+<body>
+<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
+
+<header class="site-header">
+  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+  <div class="header-actions">
+    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="detail-hero">
+  <div class="detail-hero-icon"><i data-lucide="book-open"></i></div>
+  <h1 class="detail-title">Codex Omnia</h1>
+  <p class="detail-subtitle">Ein vollständig offline-fähiges Wissenssystem auf einem Raspberry Pi 2W. Wikipedia, Kiwix-Server und eine RAG-Pipeline mit lokalem LLM – komplett ohne Internet.</p>
+</section>
+
+<!-- Content -->
+<section class="detail-content">
+  <div class="detail-grid">
+
+    <!-- Konzept -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="lightbulb"></i> Konzept</span>
+      <h2>Die Idee</h2>
+      <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+        Codex Omnia ist ein lokales KI-Frage-Antwort-System. Die Wissensquelle ist eine vollständige englische Wikipedia-Kopie im ZIM-Format (~115 GB). Der Kiwix-Server stellt sie als Webinterface bereit, die RAG-Pipeline verbindet sie mit einem lokalen LLM.
+      </p>
+    </div>
+
+    <!-- Raspberry Pi Specs -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="cpu"></i> Hardware</span>
+      <h2>Raspberry Pi 2W</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="cpu"></i> BCM2710A1 (Quad-Core ARM)</li>
+        <li><i data-lucide="memory-stick"></i> 512 MB LPDDR2</li>
+        <li><i data-lucide="wifi"></i> 2.4 / 5 GHz WLAN</li>
+        <li><i data-lucide="hard-drive"></i> microSD + USB-Storage</li>
+        <li><i data-lucide="zap"></i> ~1W idle</li>
+      </ul>
+    </div>
+
+    <!-- Kiwix Server -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="globe"></i> Server</span>
+      <h2>Kiwix Serve</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="book-open"></i> Wikipedia EN (115 GB ZIM)</li>
+        <li><i data-lucide="radio"></i> WiFi-Hotspot „Codex_Archive"</li>
+        <li><i data-lucide="server"></i> Port 8080, systemd-Service</li>
+        <li><i data-lucide="shield"></i> Kein Internet nötig</li>
+        <li><i data-lucide="refresh-cw"></i> Auto-Start nach Reboot</li>
+      </ul>
+    </div>
+
+    <!-- RAG Pipeline -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="workflow"></i> Pipeline</span>
+      <h2>RAG — Retrieval-Augmented Generation</h2>
+      <div class="code-window" style="margin-top:1rem;">
+        <div class="code-window-bar">
+          <span class="code-dot code-dot--r"></span>
+          <span class="code-dot code-dot--y"></span>
+          <span class="code-dot code-dot--g"></span>
+        </div>
+        <div class="code-body"><span class="cm">  Nutzerfrage: "Wer war Albert Einstein?"</span>
+<span class="cm">          │</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[1] get_search_keywords()</span>
+<span class="cm">          KI-Prompt → </span><span class="var">Ollama (llama3)</span>
+<span class="cm">          Antwort: </span><span class="str">"Albert Einstein, Theory of Relativity"</span>
+<span class="cm">          │</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[2] build_context()</span>
+<span class="cm">          </span><span class="kw">find_titles()</span><span class="cm">  →  FTS5-Suche in </span><span class="var">titles.db</span>
+<span class="cm">          </span><span class="kw">get_article_text()</span><span class="cm">  →  </span><span class="var">ZIM-Archiv</span><span class="cm"> → HTML → Klartext</span>
+<span class="cm">          │</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[3] final_answer()</span>
+<span class="cm">          KI-Prompt + Kontext → </span><span class="var">Ollama (llama3)</span>
+<span class="cm">          Antwort auf Deutsch mit Quellenangabe</span></div>
+      </div>
+    </div>
+
+    <!-- Architektur -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="layout-dashboard"></i> Architektur</span>
+      <h2>System-Übersicht</h2>
+      <div class="code-window" style="margin-top:1rem;">
+        <div class="code-window-bar">
+          <span class="code-dot code-dot--r"></span>
+          <span class="code-dot code-dot--y"></span>
+          <span class="code-dot code-dot--g"></span>
+        </div>
+        <div class="code-body"><span class="cm">┌───────────────────────────────────────────────────────┐</span>
+<span class="cm">│                     </span><span class="var">app.py</span><span class="cm">                             │</span>
+<span class="cm">│                  AntigravityApp                       │</span>
+<span class="cm">│                                                       │</span>
+<span class="cm">│  </span><span class="fn">get_search_keywords()</span><span class="cm">  ──►  </span><span class="str">Ollama LLM (llama3)</span><span class="cm">      │</span>
+<span class="cm">│  </span><span class="fn">build_context()</span><span class="cm">        ──►  </span><span class="kw">Librarian</span><span class="cm">                │</span>
+<span class="cm">│  </span><span class="fn">final_answer()</span><span class="cm">         ──►  </span><span class="str">Ollama LLM (llama3)</span><span class="cm">      │</span>
+<span class="cm">└───────────────────────┬───────────────────────────────┘</span>
+<span class="cm">                        │</span>
+<span class="cm">            ┌───────────▼───────────┐</span>
+<span class="cm">            │   </span><span class="var">core/librarian.py</span><span class="cm">   │</span>
+<span class="cm">            │      Librarian        │</span>
+<span class="cm">            │                       │</span>
+<span class="cm">            │  </span><span class="fn">find_titles()</span><span class="cm">    ──► </span><span class="str">SQLite FTS5</span><span class="cm">  (titles.db)</span>
+<span class="cm">            │  </span><span class="fn">get_article_text()</span><span class="cm">─► </span><span class="str">libzim Archive</span><span class="cm"> (.zim)</span>
+<span class="cm">            └───────────────────────┘</span></div>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="layers"></i> Stack</span>
+      <h2>Technologien</h2>
+      <div class="tech-stack" style="margin-top:0.75rem;">
+        <span class="tech-pill"><i data-lucide="database"></i> Python</span>
+        <span class="tech-pill"><i data-lucide="brain"></i> Ollama</span>
+        <span class="tech-pill"><i data-lucide="book-open"></i> libzim</span>
+        <span class="tech-pill"><i data-lucide="database"></i> SQLite FTS5</span>
+        <span class="tech-pill"><i data-lucide="code"></i> BeautifulSoup</span>
+        <span class="tech-pill"><i data-lucide="server"></i> Kiwix</span>
+      </div>
+    </div>
+
+    <!-- Setup-Schritte -->
+    <div class="tile col-2 reveal">
+      <span class="tile-label"><i data-lucide="terminal"></i> Setup</span>
+      <h2>Pi-Installation</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="settings"></i> IPv6 deaktivieren & System updaten</li>
+        <li><i data-lucide="download"></i> Kiwix Tools installieren (aarch64)</li>
+        <li><i data-lucide="hard-drive"></i> ZIM-Dateien per USB kopieren</li>
+        <li><i data-lucide="radio"></i> WiFi-Hotspot „Codex_Archive" einrichten</li>
+        <li><i data-lucide="play"></i> systemd-Service aktivieren</li>
+        <li><i data-lucide="check-circle"></i> Kiwix auf Port 8080 erreichbar</li>
+      </ul>
+    </div>
+
+    <!-- Datenfluss-Statistiken -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="bar-chart-3"></i> Zahlen</span>
+      <h2>Projekt in Zahlen</h2>
+      <div class="stat-row" style="margin-top:1.25rem;">
+        <div class="stat-block">
+          <div class="stat-big">115 GB</div>
+          <div class="stat-desc">Wikipedia ZIM-Archiv</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">2,8 GB</div>
+          <div class="stat-desc">FTS5-Suchindex</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">~7 Mio.</div>
+          <div class="stat-desc">Artikel indexiert</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">~1W</div>
+          <div class="stat-desc">Stromverbrauch (idle)</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">0</div>
+          <div class="stat-desc">API-Kosten</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
