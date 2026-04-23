@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PilotDezzy – WhatDoIEat: KI-Essensplaner mit Hermes Agent, Claude Haiku und Notion-Integration auf dem NUC." />
+  <title>WhatDoIEat | PilotDezzy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306b6d4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='white'>PD</text></svg>" />
+</head>
+<body>
+<div class="bg-scene" aria-hidden="true"><div class="bg-blob bg-blob--1"></div><div class="bg-blob bg-blob--2"></div><div class="bg-blob bg-blob--3"></div></div>
+
+<header class="site-header">
+  <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+  <a href="../index.html" class="site-logo">&lt;PilotDezzy /&gt;</a>
+  <div class="header-actions">
+    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln"></button>
+    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="detail-hero">
+  <div class="detail-hero-icon"><i data-lucide="chef-hat"></i></div>
+  <h1 class="detail-title">WhatDoIEat</h1>
+  <p class="detail-subtitle">Ein KI-Essensplaner, der auf dem NUC-Server als Hermes-Agent läuft. Er plant autonom vegetarische Wochenpläne und schreibt Mahlzeiten samt Einkaufsliste direkt in Notion – per Telegram-Befehl.</p>
+</section>
+
+<!-- Content -->
+<section class="detail-content">
+  <div class="detail-grid">
+
+    <!-- Konzept -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="lightbulb"></i> Konzept</span>
+      <h2>Die Idee</h2>
+      <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+        Jede Woche die gleiche Frage: „Was essen wir?" – WhatDoIEat löst das Problem automatisiert. Ein KI-Agent wählt aus über 120 kuratierten vegetarischen Gerichten, vermeidet Wiederholungen und generiert eine komplette Einkaufsliste für 2 Personen.
+      </p>
+    </div>
+
+    <!-- Infrastruktur -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="server"></i> Infrastruktur</span>
+      <h2>NUC Server</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="bot"></i> Hermes AI Agent</li>
+        <li><i data-lucide="message-circle"></i> Telegram Bot Interface</li>
+        <li><i data-lucide="cloud"></i> OpenRouter API Gateway</li>
+        <li><i data-lucide="brain"></i> Claude 4.5 Haiku (LLM)</li>
+        <li><i data-lucide="plug"></i> Notion MCP Server (npx)</li>
+      </ul>
+    </div>
+
+    <!-- Features -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="list-checks"></i> Features</span>
+      <h2>Was der Agent kann</h2>
+      <ul class="info-list" style="margin-top:0.75rem;">
+        <li><i data-lucide="calendar"></i> Wochenplan Mo–So generieren</li>
+        <li><i data-lucide="shopping-cart"></i> Einkaufsliste mit Mengen</li>
+        <li><i data-lucide="file-text"></i> Notion-Seite automatisch erstellen</li>
+        <li><i data-lucide="history"></i> Wiederholungsvermeidung (History)</li>
+        <li><i data-lucide="sparkles"></i> Neue Gerichte vorschlagen</li>
+      </ul>
+    </div>
+
+    <!-- Architektur -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="workflow"></i> Pipeline</span>
+      <h2>Architektur — Vom Telegram-Befehl zur Notion-Seite</h2>
+      <div class="code-window" style="margin-top:1rem;">
+        <div class="code-window-bar">
+          <span class="code-dot code-dot--r"></span>
+          <span class="code-dot code-dot--y"></span>
+          <span class="code-dot code-dot--g"></span>
+        </div>
+        <div class="code-body"><span class="cm">  User: </span><span class="str">"Plane die Woche"</span><span class="cm"> → Telegram Bot</span>
+<span class="cm">          │</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[1] Hermes Agent</span><span class="cm">  (NUC Server)</span>
+<span class="cm">          │  Skill: </span><span class="var">meal_planner</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[2] Read</span><span class="cm"> </span><span class="var">gerichte.md</span><span class="cm"> + </span><span class="var">history.json</span>
+<span class="cm">          │  120+ Gerichte laden, letzte 3 Wochen ausschließen</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[3] LLM Call</span><span class="cm">  → </span><span class="str">OpenRouter</span><span class="cm"> → </span><span class="var">Claude 4.5 Haiku</span>
+<span class="cm">          │  7 Mahlzeiten + Einkaufsliste generieren</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[4] Notion MCP</span><span class="cm">  → Seite erstellen</span>
+<span class="cm">          │  Tabelle: Wochenplan | To-Dos: Einkaufsliste</span>
+<span class="cm">          ▼</span>
+<span class="cm">  </span><span class="fn">[5] Update</span><span class="cm"> </span><span class="var">history.json</span><span class="cm"> + Antwort via Telegram</span></div>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="tile reveal">
+      <span class="tile-label"><i data-lucide="layers"></i> Stack</span>
+      <h2>Technologien</h2>
+      <div class="tech-stack" style="margin-top:0.75rem;">
+        <span class="tech-pill"><i data-lucide="bot"></i> Hermes Agent</span>
+        <span class="tech-pill"><i data-lucide="brain"></i> Claude 4.5 Haiku</span>
+        <span class="tech-pill"><i data-lucide="cloud"></i> OpenRouter</span>
+        <span class="tech-pill"><i data-lucide="plug"></i> Notion MCP</span>
+        <span class="tech-pill"><i data-lucide="message-circle"></i> Telegram</span>
+        <span class="tech-pill"><i data-lucide="server"></i> Intel NUC</span>
+      </div>
+    </div>
+
+    <!-- Beispiel-Befehle -->
+    <div class="tile col-2 reveal">
+      <span class="tile-label"><i data-lucide="terminal"></i> Usage</span>
+      <h2>Telegram-Befehle</h2>
+      <div class="code-window" style="margin-top:0.75rem;">
+        <div class="code-window-bar">
+          <span class="code-dot code-dot--r"></span>
+          <span class="code-dot code-dot--y"></span>
+          <span class="code-dot code-dot--g"></span>
+        </div>
+        <div class="code-body"><span class="str">"Plane die Woche"</span><span class="cm">              → Aktuelle Woche planen</span>
+<span class="str">"Plane KW 18"</span><span class="cm">                  → Bestimmte Woche planen</span>
+<span class="str">"Was essen wir nächste Woche?"</span><span class="cm">   → Nächste Woche planen</span>
+<span class="str">"Ich will diese Woche Fisch"</span><span class="cm">    → Planung mit Wunsch</span>
+<span class="str">"Plane die Woche, ohne Pilze"</span><span class="cm">   → Planung mit Ausschluss</span></div>
+      </div>
+    </div>
+
+    <!-- Zahlen -->
+    <div class="tile detail-full reveal">
+      <span class="tile-label"><i data-lucide="bar-chart-3"></i> Zahlen</span>
+      <h2>Projekt in Zahlen</h2>
+      <div class="stat-row" style="margin-top:1.25rem;">
+        <div class="stat-block">
+          <div class="stat-big">120+</div>
+          <div class="stat-desc">Kuratierte Gerichte</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">~$0.05</div>
+          <div class="stat-desc">pro Wochenplan</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">~$2.50</div>
+          <div class="stat-desc">pro Jahr</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">7</div>
+          <div class="stat-desc">Mahlzeiten / Woche</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">13</div>
+          <div class="stat-desc">Gerichte-Kategorien</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> PilotDezzy · <a href="../index.html">← Zurück zur Startseite</a></p>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
